@@ -1,0 +1,23 @@
+---
+title: "Olcay SOYUHAN"
+layout: default
+permalink: "/author-olcay-soyuhan.html"
+---
+<div class="container">
+<div class="row justify-content-center">
+    <div class="col-md-8">        
+        <div class="row align-items-center mb-5">
+            <div class="col-md-9">
+                <h2 class="font-weight-bold">{{page.title}}</h2>
+                <p><a href="{{ site.authors.olcay.site }}">{{ site.authors.olcay.site }}</a></p>
+                <p class="excerpt">{{ site.authors.olcay.bio }}</p>
+            </div>
+        </div>
+        <h4 class="spanborder"></h4>
+            {% assign posts = site.posts | where:"author","olcay" %}
+            {% for post in posts %}
+            {% include main-loop-card.html %}
+            {% endfor %}
+    </div>
+</div>
+</div>
